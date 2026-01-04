@@ -1,0 +1,125 @@
+/* Book ----------------------------------------------------------------------*/
+.book__background {
+   
+    background: rgb(255, 235, 216);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book__sizing {
+    transform: scale(0.8);
+}
+
+.book {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    perspective: 1500px;
+    transition: all 1.4s;
+}
+
+.book:hover {
+    transform: translateX(50%);
+    transition: all 1s;
+}
+
+.book:hover .cover {
+    transform: rotateX(10deg) rotateY(-180deg);
+    color: #203864;
+    transition: transform 1s linear, color 0s linear 0.5s;
+}
+
+.book:hover .page {
+    transform: rotateX(10deg) rotateY(-180deg);
+    z-index: 2;
+}
+
+.cover {
+    z-index: 1;
+    transition: transform 1.4s linear, color 0s linear 0.7s;
+    text-align: center;
+}
+
+.cover p {
+    font-size: 25px;
+    margin-top: 40px;
+    backface-visibility: hidden;
+}
+
+.back-cover {
+    z-index: -3;
+    box-shadow: -3px 0px 5px rgb(25, 19, 77);
+}
+
+.cover, .back-cover {
+    position: absolute;
+    height: 250px;
+    width: 190px;
+    border-radius: 0 15px 15px 0;
+    transform: rotateX(20deg);
+    transform-origin: center left;
+    background-color: #203864;
+    color: white;
+    border:rgb(25, 19, 77) solid 3px;
+}
+
+.page, .contentpage {
+    position: absolute;
+    height: 240px;
+    width: 190px;
+    border-radius: 0 15px 15px 0;
+    transform: rotateX(20deg);
+    z-index: -1;
+    transform-origin: center left;
+    background-color: rgb(231, 231, 231);
+    color: #203864;
+    transition: linear;
+}
+
+.page:nth-child(2) {
+    transition-duration: 1.2s;
+}
+
+.page:nth-child(3) {
+    transition-duration: 1s;
+}
+
+.page:nth-child(4) {
+    transition-duration: 0.8s;
+}
+
+.book:hover .page:nth-child(2) {
+    transition-duration: 1.6s
+}
+
+.book:hover .page:nth-child(3) {
+    transition-duration: 1.4s
+}
+
+.book:hover .page:nth-child(4) {
+    transition-duration: 1.2s
+}
+
+.contentpage {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 35px;
+    position: relative;
+    z-index: -2;
+    text-decoration: none;
+}
+
+.contentpage img {
+    width: 90%;
+    color: inherit;
+}
+
+.contentpagetext {
+    width: 150px;
+}
