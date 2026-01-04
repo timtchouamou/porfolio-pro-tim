@@ -10,6 +10,7 @@ import { projects } from "../lib/content";
 import { useRef, useState } from "react";
 import { AnimatePresence, easeInOut, motion } from "framer-motion";
 
+
 export default function ProjectsPage() {
   const [contactOpen, setContactOpen] = useState(false);
   const [toast, setToast] = useState<{
@@ -129,8 +130,9 @@ export default function ProjectsPage() {
       <ContactModal
         open={contactOpen}
         onCloseAction={closeContact}
-        onNotifyAction={notify}
       />
+
+   
 
       <AnimatePresence>
         {toast ? (

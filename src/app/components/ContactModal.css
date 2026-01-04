@@ -1,0 +1,352 @@
+nav, .scroll, .landing__content {
+    opacity: 1;
+    visibility: visible;
+    transition: all 500ms 400ms;
+}
+
+.modal--open nav,
+.modal--open .scroll,
+.modal--open .landing__content,
+.modal--open .mail__btn {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 400ms;
+}
+
+/* Modal --------------------------------------------------------------------------*/
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 1100px;
+    max-height: 700px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    visibility: hidden;
+    transition: visibility 1s, box-shadow 500ms ease;
+}
+
+.modal--open .modal {
+    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+    visibility: visible;
+    z-index: 2;
+}
+
+.modal--open .modal__overlay--exit {
+    z-index: 1;
+    display: flex;
+}
+
+.modal__half {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px;
+    transition: transform 300ms ease-in;
+    z-index: 2;
+}
+
+.modal__about {
+    background-color: rgb(245, 245, 245);
+    transform: translateX(-110%);
+}
+
+.modal--open .modal__about,
+.modal--open .modal__contact {
+    transform: translateX(0%);
+}
+
+.modal__contact {
+    background-color: #242424;
+    color: white;
+    position: relative;
+    transform: translateX(110%);
+}
+
+.modal__title {
+    font-size: 35px;
+    width: 100%;
+    padding: 0 0px;
+}
+
+.modal__subtitle {
+    font-size: 18px;
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.modal__description {
+    font-size: 15px;
+    width: 100%;
+    padding: 20px 0px 30px 0px;
+    line-height: 30px;
+}
+
+.languages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    height: fit-content;
+}
+
+.language__list {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.language {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.language__icon {
+    width: 50px;
+    height: 50px;
+    transition: all 300ms;
+}
+
+.language:hover .language__icon {
+    filter: brightness(80%);
+    opacity: 0.86;
+    transform: scale(0.9);
+}
+
+.language__name {
+    position: absolute;
+    bottom: -20px;
+    transform: scale(0);
+    transition: all 300ms;
+    font-size: 12px;
+}
+
+.language:hover .language__name {
+    transform: scale(1);
+}
+
+.contact__form {
+    margin-top: 30px;
+}
+
+.form__item {
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    background-color: #242424;
+    color: white;
+    outline: none;
+    border: 3px solid #c0c4cc;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    transition: all 300ms ease;
+}
+
+input:hover, textarea:hover {
+    border-color: #dcdfe6;
+}
+
+input:focus, textarea:focus {
+    border-color: #f06449;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+textarea {
+    resize: vertical;
+    height: 130px;
+}
+
+.form__submit {
+    background-color: #f06449;
+    border: 2px solid #f06449;
+    color: white;
+    font-weight: 700;
+    width: 100%;
+    max-width: 240px;
+    padding: 12px 24px;
+    font-size: 20px;
+    margin-top: 20px;
+    transition: all 300ms;
+}
+
+.form__submit:hover {
+    border-color: white;
+    background-color: transparent;
+}
+
+.form__submit:active {
+    border-color: #f06449;;
+    color: #f06449;
+}
+
+.modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+}
+
+.modal__overlay--loading {
+    background-color: #242424;
+    display: none;
+}
+
+.fa-spinner {
+    animation: spinner 750ms infinite linear;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.modal__overlay--success {
+    background-color: rgb(26, 88, 26);
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    display: none;
+}
+
+.modal__overlay--visible {
+    display: flex;
+}
+
+.modal__exit {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-size: 36px;
+    z-index: 100;
+}
+
+.click {
+    cursor: pointer;
+    transition: transform 300ms ease;
+}
+
+.click:hover {
+    transform: scale(1.1);
+}
+
+.click:active {
+    transform: scale(0.8);
+}
+
+.modal__overlay--exit {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+
+.modal__about--mobile,
+.modal__contact--mobile {
+    opacity: 0;
+    transition: all 300ms;
+    z-index: 2;
+    display: none;
+    max-height: 95vh;
+}
+
+/* Responsive Design ---------------------------------------------------------------------------*/
+
+@media (max-width: 1000px) {
+    .mail__btn {
+        position: absolute;
+    }
+
+    .project__wrapper {
+        display: flex;
+        justify-content: center;
+        width: 600px;
+        height: 350px;
+    }
+
+    .modal__original {
+        display: none;
+    }
+
+    .modal__about--open .modal__about--mobile,
+    .modal__contact--open .modal__contact--mobile {
+        opacity: 1;
+        display: flex;
+    }
+
+    .modal__half {
+        width: 100%;
+    }
+
+    .modal__exit--about {
+        color: #242424;
+    }
+
+    .dark-theme .modal__exit--about {
+        color: white;
+        background-color: #242424;
+    }
+}
+
+@media (max-width: 1400px) {
+    .modal {
+        max-height: 580px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal__title {
+        font-size: 30px;
+    }
+    
+    .modal__subtitle {
+        font-size: 15px;
+    }
+    
+    .modal__description {
+        font-size: 12px;
+        line-height: 25px;
+    }
+
+    .language__icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .modal__half {
+        padding: 50px;
+    }
+}

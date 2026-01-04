@@ -3,6 +3,30 @@
 import { useState } from "react";
 import ContactModal from "@/app/components/ContactModal";
 import Navigation from "./components/Navigation";
+import React from "react";
+
+// Temporary Modal definition (replace with your actual Modal import if available)
+type ModalProps = {
+  open: boolean;
+  contact: (e: React.FormEvent<HTMLFormElement>) => void;
+  closeModal: () => void;
+};
+const Modal: React.FC<ModalProps> = ({ open, contact, closeModal }) => {
+  if (!open) return null;
+  return (
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+      <form
+        className="bg-white text-black p-6 rounded shadow-lg"
+        onSubmit={contact}
+      >
+        <h2 className="text-lg font-bold mb-4">Contact Form</h2>
+        {/* Add your form fields here */}
+        <button type="submit" className="mr-2 px-4 py-2 bg-blue-600 text-white rounded">Send</button>
+        <button type="button" onClick={closeModal} className="px-4 py-2 bg-gray-400 text-white rounded">Close</button>
+      </form>
+    </div>
+  );
+};
 import { AnimatePresence, motion } from "framer-motion";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
@@ -10,8 +34,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Clock from "./gallery/Clock";
-import Teacup from "./gallery/Teacup";
-import Loading from "./gallery/Loading";
+
 
 
 export default function Home() {
@@ -29,7 +52,7 @@ export default function Home() {
   };
 
   return (
-   <div className="relative min-h-screen flex flex-col bg-slate-950 text-white overflow-hidden">
+   <div className="relative min-h-screen flex flex-col bg-green-950 text-white overflow-hidden">
       <div
         className="pointer-events-none absolute inset-0 opacity-60 bg-[radial-gradient(120%_80%_at_50%_0%,rgba(59,130,246,0.12),rgba(14,165,233,0.1),transparent)]"
         aria-hidden
@@ -39,7 +62,7 @@ export default function Home() {
     
 
 
- <main className="flex justify-center items-center pt-24 pb-none">
+ <main className="flex justify-center items-center pt-30 pb-none">
          <Clock />       
       </main>
 
@@ -55,9 +78,9 @@ export default function Home() {
       <ContactModal
         open={contactOpen}
         onCloseAction={closeContact}
-        onNotifyAction={notify}
       />
 
+      
       <AnimatePresence>
         {toast ? (
           <motion.div

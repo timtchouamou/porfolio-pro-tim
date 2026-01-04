@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import ContactEmail from "../../emails/ContactEmail";
 
-
 export const runtime = "nodejs";
 
 export async function POST(req: NextRequest) {
@@ -16,25 +15,29 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const apiKey = process.env.RESEND_API_KEY;
-    const toEmail = process.env.CONTACT_TO_EMAIL || "tim.tchouamou@gmail.com";
-
-    if (apiKey) {
-      const resend = new Resend(apiKey);
-      await resend.emails.send({
-        from: process.env.CONTACT_FROM_EMAIL || "Portfolio <onboarding@resend.dev>",
-        to: toEmail,
-        subject: `${process.env.CONTACT_SUBJECT_PREFIX || "New portfolio contact"} from ${name}`,
-        replyTo: email,
-        react: ContactEmail({ name, email, message }),
-      });
-    } else {
-      console.warn("RESEND_API_KEY not set. Skipping email send.");
+    if (!process.env.RESEND_API_KEY) {
+      console.error("Missing RESEND_API_KEY");
+      return NextResponse.json(
+        { success: false, error: "Email service not configured." },
+        { status: 500 }
+      );
     }
 
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
+    await resend.emails.send({
+      from: process.env.CONTACT_FROM_EMAIL!, // VERIFIED DOMAIN EMAIL
+      to: process.env.CONTACT_TO_EMAIL || "tim.tchouamou@gmail.com",
+      subject: `${
+        process.env.CONTACT_SUBJECT_PREFIX || "New portfolio contact"
+      } from ${name}`,
+      replyTo: email,
+      react: ContactEmail({ name, email, message }),
+    });
+
     return NextResponse.json({ success: true });
-  } catch (err) {
-    console.error("Contact API error:", err);
+  } catch (error) {
+    console.error("Contact API error:", error);
     return NextResponse.json(
       { success: false, error: "Server error. Please try again." },
       { status: 500 }
