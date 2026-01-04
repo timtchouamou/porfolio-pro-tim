@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 import { projects } from "../lib/content";
 
@@ -11,7 +11,7 @@ const cardMotion = {
   initial: { opacity: 0, y: 18 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true, margin: "-80px" },
-  transition: { duration: 0.55, ease: ["easeInOut"] },
+  transition: { duration: 0.55, ease: easeInOut },
 };
 
 const Projects = () => {

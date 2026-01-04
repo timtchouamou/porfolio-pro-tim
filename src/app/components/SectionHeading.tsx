@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 
 type SectionHeadingProps = {
   eyebrow: string;
@@ -23,7 +23,7 @@ const SectionHeading = ({
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.5, ease: ["easeInOut"] }}
+      transition={{ duration: 0.5, ease: easeInOut }}
       className={`flex flex-col gap-3 ${alignment}`}
     >
       <span className="inline-flex items-center gap-2 rounded-full border border-slate-800/80 bg-slate-900/70 px-3 py-1 text-xs uppercase tracking-[0.24em] text-slate-400 shadow-lg shadow-blue-500/10">

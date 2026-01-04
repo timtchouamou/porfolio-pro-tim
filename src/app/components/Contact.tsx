@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Mail, Linkedin } from "lucide-react";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 
 type ContactProps = {
   onOpenContact?: () => void;
@@ -15,7 +15,7 @@ const Contact = ({ onOpenContact }: ContactProps) => {
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-60px" }}
-        transition={{ duration: 0.5, ease: ["easeInOut"] }}
+        transition={{ duration: 0.5, ease: easeInOut }}
         className="max-w-6xl mx-auto rounded-2xl border border-blue-500/25 bg-gradient-to-r from-blue-500/10 via-slate-900 to-cyan-500/10 p-10 shadow-xl shadow-blue-500/15"
       >
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">

@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 import ContactModal from "../components/ContactModal";
 import { projects } from "../lib/content";
 import { useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, easeInOut, motion } from "framer-motion";
 
 export default function ProjectsPage() {
   const [contactOpen, setContactOpen] = useState(false);
@@ -128,8 +128,8 @@ export default function ProjectsPage() {
 
       <ContactModal
         open={contactOpen}
-        onClose={closeContact}
-        onNotify={notify}
+        onCloseAction={closeContact}
+        onNotifyAction={notify}
       />
 
       <AnimatePresence>
@@ -138,7 +138,7 @@ export default function ProjectsPage() {
             initial={{ opacity: 0, y: 16, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.98 }}
-            transition={{ duration: 0.2, ease: "easeOut" }}
+            transition={{ duration: 0.2, ease: easeInOut }}
             className="fixed bottom-6 right-6 z-[3000] max-w-sm rounded-2xl border border-slate-800 bg-slate-900/90 px-4 py-3 shadow-xl shadow-blue-500/20"
           >
             <div className="flex items-start gap-3">

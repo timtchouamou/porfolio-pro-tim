@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { heroStats, highlightTags } from "../lib/content";
 
@@ -34,7 +34,7 @@ const Hero = ({ onOpenContact }: HeroProps) => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          transition={{ duration: 0.7, ease: easeInOut }}
           className="space-y-8"
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-400/10 px-4 py-2 text-sm text-blue-200 shadow-lg shadow-blue-500/20">
