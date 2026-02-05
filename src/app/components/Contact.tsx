@@ -9,6 +9,7 @@ type ContactProps = {
 };
 
 const Contact = ({ onOpenContact }: ContactProps) => {
+  
   return (
     <section id="contact" className="py-16 px-6">
       <motion.div

@@ -9,6 +9,7 @@ type NavigationProps = {
   onOpenContact?: () => void;
 };
 
+
 const Navigation = ({ onOpenContact }: NavigationProps) => {
   return (
     <header className="fixed top-0 z-1000 w-full backdrop-blur-lg bg-slate-950/70 border-b border-slate-800/70 shadow-[0_10px_60px_-35px_rgba(0,0,0,0.6)]">

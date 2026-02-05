@@ -22,6 +22,7 @@ const AboutPage = () => {
     setToast({ type, message });
     toastTimer.current = setTimeout(() => setToast(null), 4000);
   };
+  // Skills data
   const skills = [
     {
       name: "React",
@@ -69,6 +70,7 @@ const AboutPage = () => {
     },
   ];
 
+  //object array for education and certifications
   const education: Array<{
     title: string;
     institution: string;
@@ -82,6 +84,7 @@ const AboutPage = () => {
       url: "/cert.pdf",
     },
   ];
+
 
   return (
     <div className="relative min-h-screen flex flex-col bg-slate-950 text-white overflow-hidden">
@@ -217,13 +220,14 @@ const AboutPage = () => {
         </section>
       </main>
 
-      <Footer onOpenContact={openContact} />
-
       <ContactModal
         open={contactOpen}
         onCloseAction={closeContact}
         onNotifyAction={notify}
       />
+      <Footer onOpenContact={openContact} />
+
+     
 
       <AnimatePresence>
         {toast ? (
