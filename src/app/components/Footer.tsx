@@ -8,7 +8,7 @@ type FooterProps = {
 
 const Footer = ({ onOpenContact }: FooterProps) => {
   return (
-    <footer className="bg-slate-950 border-t border-slate-800 py-10 px-6">
+    <footer className="bg-slate-950 border-t border-slate-800 py-10 px-6" >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="text-center md:text-left">
           <p className="text-lg font-semibold text-white">

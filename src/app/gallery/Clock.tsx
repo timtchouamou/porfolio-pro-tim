@@ -35,17 +35,23 @@ const Clock: React.FC = () => {
   return (
     <div className="clock__background">
       <div className="clock__sizing">
+
         <div className="clock">
+
           <div className="hour">
             <div className="hr" ref={hrRef}></div>
           </div>
+
           <div className="min">
             <div className="mn" ref={mnRef}></div>
           </div>
+
           <div className="sec">
             <div className="sc" ref={scRef}></div>
           </div>
+
         </div>
+        
       </div>
     </div>
   );

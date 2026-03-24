@@ -3,6 +3,29 @@
 //Each icon is a React component (SVG-based): to install it, run npm install lucide-react
 import { LucideIcon, Github, Linkedin, Mail } from "lucide-react";
 
+
+//navigation links
+export const navLinks = [
+  { label: "About", href: "#about" },
+  { label: "Projects", href: "#projects" },
+  { label: "Skills", href: "#skills" },
+  { label: "Contact", href: "#contact" },
+];
+
+
+//highlight tags
+export const highlightTags = [
+  "Frontend Developer",
+  "Next.js + TypeScript",
+  "Design Systems",
+  "Performance-first",
+  "Git & GitHub",
+  "Biome & ESLint workflow",
+];
+
+
+
+
 //custom type for hero stats
 export type Stat = {
   label: string;
@@ -13,7 +36,7 @@ export type Stat = {
 export const heroStats: Stat[] = [
   {
     label: "Featured projects",
-    value: "4",
+    value: "5",
     helper: "30+ builds, prototypes, and learning",
   },
 
@@ -31,6 +54,20 @@ export const heroStats: Stat[] = [
     helper: "React • Next.js • TypeScript",
   },
 ];
+
+
+//workflow items
+export const workflowItems =
+[
+ "Clean Code",
+   "Component Architecture",
+   "Automation",
+   "Figma To Code",
+   "Accessible UI",
+   "Linting & Formatting",
+ ]
+
+
 
 //custom type for projects
 export type Project = {
@@ -55,6 +92,26 @@ export const projects: Project[] = [
     alt: "skinstric.ai",
     live: "https://skinstric-tim-rbnq.vercel.app/",
     code: "https://github.com/timtchouamou/Skinstric-tim",
+  },
+  {
+    title: "ImmigrationPro",
+    description: "ImmigrationPro is a production-style single-page application designed for an immigration consultancy workflow. I implemented a full client-facing experience with multilingual support (English/French), a structured services presentation, a request submission flow connected to Firebase Firestore, and an application tracking interface with progress stages.",
+    impact:"This project uses React 19 with TypeScript for a type-safe frontend, built with Vite for fast development. The UI is built with Chakra UI components, styled with Emotion, and includes animations via Framer Motion. State management is handled by Redux Toolkit, navigation with React Router DOM v7, and internationalization for multi-language support. Firebase powers the backend for authentication and data storage. UI theming includes light/dark mode support with Next Themes, and icons from Chakra Icons and React Icons. Development tools include ESLint with TypeScript support for code quality and linting. ",
+    tech: ["React 19", "TypeScript", "Vite", "Chakra UI", "Emotion", "Framer Motion", "Redux Toolkit", "React Router DOM v7", "i18next for internationalization", "Firebase for backend services", "Next Themes for theming", "Chakra Icons and React Icons for iconography", "ESLint with TypeScript support for code quality and linting."],
+    image: "/projects/immigrationpro.png",
+    alt: "ImmigrationPro",
+    live: "https://immigration-pro.vercel.app/",
+    code: "https://github.com/timtchouamou/immigrationPro",
+  },
+  {
+    title: "Transit Import Export",
+    description: "Transit Import Export is an interactive logistics assistant that helps users manage and track shipments, combining clean design with smooth API integration, and component architecture. This was a paid internship project.",
+    impact:"This project uses React 19 with TypeScript for a type-safe frontend, built with Vite for fast development. The UI is built with Chakra UI components, styled with Emotion, and includes animations via Framer Motion. State management is handled by Redux Toolkit, navigation with React Router DOM v7, and internationalization for multi-language support. Firebase powers the backend for authentication and data storage. UI theming includes light/dark mode support with Next Themes, and icons from Chakra Icons and React Icons. Development tools include ESLint with TypeScript support for code quality and linting. ",
+    tech: ["React 19", "TypeScript", "Vite", "Chakra UI", "Emotion", "Framer Motion", "Redux Toolkit", "React Router DOM v7", "i18next for internationalization", "Firebase for backend services", "Next Themes for theming", "Chakra Icons and React Icons for iconography", "ESLint with TypeScript support for code quality and linting."],
+    image: "/projects/transit.png",
+    alt: "transitImportExport",
+    live: "https://transit-import-export.vercel.app/",
+    code: "https://github.com/timtchouamou/transit_import_export",
   },
   {
     title: "Summarist",
@@ -155,30 +212,6 @@ export const socials: SocialLink[] = [
     icon: Mail },
 ];
 
-//navigation links
-export const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
-  { label: "Contact", href: "#contact" },
-];
-//highlight tags
-export const highlightTags = [
-  "Frontend Developer",
-  "Next.js + TypeScript",
-  "Design Systems",
-  "Performance-first",
-  "Git & GitHub",
-  "Biome & ESLint workflow",
-];
 
 
-export const workflowItems =
-[
- "Clean Code",
-   "Component Architecture",
-   "Automation",
-   "Figma To Code",
-   "Accessible UI",
-   "Linting & Formatting",
- ]
+
