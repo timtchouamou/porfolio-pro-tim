@@ -36,7 +36,7 @@ export type Stat = {
 export const heroStats: Stat[] = [
   {
     label: "Featured projects",
-    value: "5",
+    value: "7",
     helper: "30+ builds, prototypes, and learning",
   },
 
