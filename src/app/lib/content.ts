@@ -108,7 +108,7 @@ export const projects: Project[] = [
     description: "Transit Import Export is an interactive logistics assistant that helps users manage and track shipments, combining clean design with smooth API integration, and component architecture. This was a paid internship project.",
     impact:"Used React 19 + TypeScript, built with Vite for fast development. The UI is built with Chakra UI components, styled with Emotion, and includes animations via Framer Motion. Handled state management  with Redux Toolkit, navigation with React Router DOM v7, internationalization for multi-language support.  authentication and data storage with Firebase. UI theming includes light/dark mode support with Next Themes, used icons from Chakra Icons and React Icons. Development tools include ESLint with TypeScript support for code quality and linting. ",
     tech: ["React 19", "TypeScript", "Vite", "Chakra UI", "Emotion", "Framer Motion", "Redux Toolkit", "React Router DOM v7", "i18next for internationalization", "Firebase", "Next Themes for theming", "Chakra Icons", "React Icons for iconography", "ESLint"],
-    image: "/projects/transit.png",
+    image: "/projects/transit.jpg",
     alt: "transitImportExport",
     live: "https://transit-import-export.vercel.app/",
     code: "https://github.com/timtchouamou/transit_import_export",
