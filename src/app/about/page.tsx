@@ -68,6 +68,10 @@ const AboutPage = () => {
       name: "Tomcat",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tomcat/tomcat-original.svg",
     },
+    {
+      name: "Chakra UI",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chakraui/chakraui-original.svg",
+    }
   ];
 
   //object array for education and certifications

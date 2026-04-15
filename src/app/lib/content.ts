@@ -21,6 +21,7 @@ export const highlightTags = [
   "Performance-first",
   "Git & GitHub",
   "Biome & ESLint workflow",
+  "Chakra UI ",
 ];
 
 
@@ -36,7 +37,7 @@ export type Stat = {
 export const heroStats: Stat[] = [
   {
     label: "Featured projects",
-    value: "7",
+    value: "8",
     helper: "30+ builds, prototypes, and learning",
   },
 
@@ -94,22 +95,22 @@ export const projects: Project[] = [
     code: "https://github.com/timtchouamou/Skinstric-tim",
   },
   {
-    title: "ImmigrationPro",
-    description: "ImmigrationPro is a production-style single-page application designed for an immigration consultancy workflow. I implemented a full client-facing experience with multilingual support (English/French), a structured services presentation, a request submission flow connected to Firebase Firestore, and an application tracking interface with progress stages.",
-    impact:"Used React 19 + TypeScript, built with Vite for fast development. The UI is built with Chakra UI components, styled with Emotion, and includes animations via Framer Motion. Handled state management  with Redux Toolkit, navigation with React Router DOM v7, internationalization for multi-language support.  authentication and data storage with Firebase. UI theming includes light/dark mode support with Next Themes, used icons from Chakra Icons and React Icons. Development tools include ESLint with TypeScript support for code quality and linting. ",
-    tech: ["React 19", "TypeScript", "Vite", "Chakra UI", "Emotion", "Framer Motion", "Redux Toolkit", "React Router DOM v7", "i18next for internationalization", "Firebase", "Next Themes for theming", "Chakra Icons", "React Icons for iconography", "ESLint"],
-    image: "/projects/immigrationpro.jpg",
-    alt: "ImmigrationPro",
+   title: "ImmigrationPro",
+   description: "ImmigrationPro is a modern bilingual immigration services web application built with React, TypeScript, and Vite. The app helps users explore study in France and work in Canada pathways, submit immigration requests, and track application progress. It uses Chakra UI for a reusable responsive interface, Redux Toolkit for state management, i18next for English/French localization, and Firebase Firestore for request data handling.",
+   impact: "ImmigrationPro demonstrates how modern frontend tools can deliver a fast, multilingual, and user-friendly immigration platform. It improves client experience with clear service navigation, smooth request submission, and practical application tracking in one unified interface.",
+   tech: ["React", "TypeScript", "Vite", "Chakra UI", "Redux Toolkit", "i18next", "Firebase Firestore", "Vercel"],
+   image: "/projects/immigrationpro.png",
+   alt: "ImmigrationPro Immigration Services Web App",
     live: "https://immigratravel-pro.vercel.app/",
     code: "https://github.com/timtchouamou/immigrationPro",
   },
   {
-    title: "Transit Import Export",
-    description: "Transit Import Export is an interactive logistics assistant that helps users manage and track shipments, combining clean design with smooth API integration, and component architecture. This was a paid internship project.",
-    impact:"Used React 19 + TypeScript, built with Vite for fast development. The UI is built with Chakra UI components, styled with Emotion, and includes animations via Framer Motion. Handled state management  with Redux Toolkit, navigation with React Router DOM v7, internationalization for multi-language support.  authentication and data storage with Firebase. UI theming includes light/dark mode support with Next Themes, used icons from Chakra Icons and React Icons. Development tools include ESLint with TypeScript support for code quality and linting. ",
-    tech: ["React 19", "TypeScript", "Vite", "Chakra UI", "Emotion", "Framer Motion", "Redux Toolkit", "React Router DOM v7", "i18next for internationalization", "Firebase", "Next Themes for theming", "Chakra Icons", "React Icons for iconography", "ESLint"],
-    image: "/projects/transit.jpg",
-    alt: "transitImportExport",
+   title: "KoudoTransit Logistics Portal",
+   description: "KoudoTransit is a modern logistics web application built with React 19, Vite, TypeScript, and Redux Toolkit. The app allows users to explore services, review customer operations, submit transport requests, and track shipment status in real time. It uses React Router for multi-page navigation, Chakra UI for a polished responsive interface, Firebase Firestore for request storage, and bilingual EN/FR content support to deliver a fast and user-friendly experience.",
+   impact: "KoudoTransit demonstrates how a modern React + Redux architecture can improve logistics workflows with clear navigation, multilingual access, quick request submission, and transparent shipment tracking. It helps teams and clients interact faster with shipping operations and service management.",
+   tech: ["React 19", "Vite", "TypeScript", "Chakra UI", "Redux Toolkit", "React Router", "Firebase Firestore", "Vercel"],
+   image: "/projects/transit.png",
+   alt: "KoudoTransit Logistics Portal",
     live: "https://transit-import-export.vercel.app/",
     code: "https://github.com/timtchouamou/transit_import_export",
   },
@@ -154,6 +155,16 @@ export const projects: Project[] = [
     live: "https://library-store-ivory.vercel.app/",
     code: "https://github.com/timtchouamou/Library-Store",
   },
+  {
+    title: "Dav'Print",
+    description: "Dav'Print is a modern printing-service web application built with React 19, TypeScript, and Vite. It helps customers discover services, browse promotions, submit quote requests, and track orders through a clean, responsive interface. The app uses Chakra UI for polished design, Redux Toolkit for global state, Firebase Firestore for request storage, and i18next for French/English localization.",
+    impact: "Dav'Print improves customer experience by making printing services easier to access online. Users can quickly request quotes, check order progress, and view offers, while the business benefits from faster lead collection and clearer service communication.",
+    tech: ["React 19", "TypeScript", "Vite", "Chakra UI", "Redux Toolkit", "Firebase Firestore", "i18next", "React Router", "Vercel"],
+    image: "/projects/dav-print.png",
+    alt: "Dav'Print Printing Service Web App",
+    live: "https://dav-print.vercel.app/",
+    code: "https://github.com/timtchouamou/Dav-Print"
+  }
 ];
 
 //custom type for skill groups
