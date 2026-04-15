@@ -37,7 +37,7 @@ export type Stat = {
 export const heroStats: Stat[] = [
   {
     label: "Featured projects",
-    value: "8",
+    value: "7",
     helper: "30+ builds, prototypes, and learning",
   },
 
@@ -155,16 +155,16 @@ export const projects: Project[] = [
     live: "https://library-store-ivory.vercel.app/",
     code: "https://github.com/timtchouamou/Library-Store",
   },
-  {
-    title: "Dav'Print",
-    description: "Dav'Print is a modern printing-service web application built with React 19, TypeScript, and Vite. It helps customers discover services, browse promotions, submit quote requests, and track orders through a clean, responsive interface. The app uses Chakra UI for polished design, Redux Toolkit for global state, Firebase Firestore for request storage, and i18next for French/English localization.",
-    impact: "Dav'Print improves customer experience by making printing services easier to access online. Users can quickly request quotes, check order progress, and view offers, while the business benefits from faster lead collection and clearer service communication.",
-    tech: ["React 19", "TypeScript", "Vite", "Chakra UI", "Redux Toolkit", "Firebase Firestore", "i18next", "React Router", "Vercel"],
-    image: "/projects/dav-print.png",
-    alt: "Dav'Print Printing Service Web App",
-    live: "https://dav-print.vercel.app/",
-    code: "https://github.com/timtchouamou/Dav-Print"
-  }
+  // {
+  //   title: "Dav'Print",
+  //   description: "Dav'Print is a modern printing-service web application built with React 19, TypeScript, and Vite. It helps customers discover services, browse promotions, submit quote requests, and track orders through a clean, responsive interface. The app uses Chakra UI for polished design, Redux Toolkit for global state, Firebase Firestore for request storage, and i18next for French/English localization.",
+  //   impact: "Dav'Print improves customer experience by making printing services easier to access online. Users can quickly request quotes, check order progress, and view offers, while the business benefits from faster lead collection and clearer service communication.",
+  //   tech: ["React 19", "TypeScript", "Vite", "Chakra UI", "Redux Toolkit", "Firebase Firestore", "i18next", "React Router", "Vercel"],
+  //   image: "/projects/dav-print.png",
+  //   alt: "Dav'Print Printing Service Web App",
+  //   live: "https://dav-print.vercel.app/",
+  //   code: "https://github.com/timtchouamou/Dav-Print"
+  // }
 ];
 
 //custom type for skill groups
