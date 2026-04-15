@@ -99,7 +99,7 @@ export const projects: Project[] = [
    description: "ImmigrationPro is a modern bilingual immigration services web application built with React, TypeScript, and Vite. The app helps users explore study in France and work in Canada pathways, submit immigration requests, and track application progress. It uses Chakra UI for a reusable responsive interface, Redux Toolkit for state management, i18next for English/French localization, and Firebase Firestore for request data handling.",
    impact: "ImmigrationPro demonstrates how modern frontend tools can deliver a fast, multilingual, and user-friendly immigration platform. It improves client experience with clear service navigation, smooth request submission, and practical application tracking in one unified interface.",
    tech: ["React", "TypeScript", "Vite", "Chakra UI", "Redux Toolkit", "i18next", "Firebase Firestore", "Vercel"],
-   image: "/projects/immigrationPro.jpg",
+   image: "/projects/immigrationpro.jpg",
    alt: "ImmigrationPro Immigration Services Web App",
     live: "https://immigratravel-pro.vercel.app/",
     code: "https://github.com/timtchouamou/immigrationPro",
