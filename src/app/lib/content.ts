@@ -100,7 +100,7 @@ export const projects: Project[] = [
     tech: ["React 19", "TypeScript", "Vite", "Chakra UI", "Emotion", "Framer Motion", "Redux Toolkit", "React Router DOM v7", "i18next for internationalization", "Firebase", "Next Themes for theming", "Chakra Icons", "React Icons for iconography", "ESLint"],
     image: "/projects/immigrationpro.jpg",
     alt: "ImmigrationPro",
-    live: "https://immigration-pro.vercel.app/",
+    live: "https://immigratravel-pro.vercel.app/",
     code: "https://github.com/timtchouamou/immigrationPro",
   },
   {
