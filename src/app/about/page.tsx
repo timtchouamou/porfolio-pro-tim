@@ -176,10 +176,7 @@ const AboutPage = () => {
                   frontend bootcamp and continuously strengthen my skills through 
                   resources like Cracking the Coding Interview and Eloquent JavaScript.”
                 </p>
-                <p className="text-slate-300 leading-relaxed">
-               It’s clear, simple, and professional while highlighting both experience
-                and learning.
-                </p>
+              
               </div>
               {/* Education */}
               <div className="mt-12 bg-slate-900/50 border border-slate-800 rounded-2xl p-8">
