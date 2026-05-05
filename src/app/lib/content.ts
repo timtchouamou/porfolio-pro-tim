@@ -15,13 +15,16 @@ export const navLinks = [
 
 //highlight tags
 export const highlightTags = [
-  "Frontend Developer",
+  "HTML",
+   "CSS",
+   "Tailwind CSS",
+   "JavaScript (ES6+)",
+   "React.js",
   "Next.js + TypeScript",
-  "Design Systems",
-  "Performance-first",
+  "Responsive Design",
   "Git & GitHub",
   "Biome & ESLint workflow",
-  "Chakra UI ",
+  "Chakra UI",
 ];
 
 

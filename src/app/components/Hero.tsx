@@ -66,12 +66,10 @@ const Hero = ({ onOpenContact }: HeroProps) => {
               Frontend Developer
             </p>
             <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold leading-[1.05] text-white">
-              Fast, efficient web applications crafted with Next.js, React, and TypeScript, 
-              using a clean modern JavaScript stack.
+              Build fast, simple web apps with Next.js, React, and TypeScript.
             </h1>
             <p className="text-lg text-slate-300 max-w-2xl">
-              I create fast, resilient, and user-focused experiences with thoughtful design,
-               ready to make an immediate impact in my first developer role.
+             I build fast, reliable, user-focused apps with clean design, ready to make an impact from day one.
             </p>
           </div>
 
