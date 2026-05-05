@@ -181,7 +181,7 @@ export const skillGroups: SkillGroup[] = [
   {
     label: "Frontend",
     accent: "text-blue-300",
-    items: ["React/Next.js", "JavaScript/TypeScript", "TailwindCSS", "Shadcn/ui", "ChartJS", "Accessibility", "Figma",],
+    items: ["HTML", "React/Next.js", "JavaScript/TypeScript", "CSS/TailwindCSS", "Shadcn/ui", "ChartJS", "Accessibility", "Figma",],
   },
 
   {
