@@ -169,12 +169,11 @@ const AboutPage = () => {
                   My Journey
                 </h2>
                 <p className="text-slate-300 leading-relaxed">
-                 “I began as a Linux System Administrator and transitioned 
-                 into software development, bringing discipline and attention 
-                 to detail. My experience with servers and automation helps me 
-                 build clean, efficient frontend interfaces. I’ve completed a
-                  frontend bootcamp and continuously strengthen my skills through 
-                  resources like Cracking the Coding Interview and Eloquent JavaScript.”
+                 “I started as a Linux System Administrator and moved into Frontend development,
+                  bringing strong discipline and attention to detail. My experience with servers
+                   and automation helps me build clean, efficient frontend interfaces. I completed 
+                   a Frontend Developer program at FES Institute and continue improving my skills 
+                   through resources like Cracking the Coding Interview and Eloquent JavaScript.”
                 </p>
               
               </div>
